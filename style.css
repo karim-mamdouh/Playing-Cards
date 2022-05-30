@@ -1,0 +1,122 @@
+/*General styling*/
+*,
+html,
+body {
+  box-sizing: border-box;
+  font-size: 20px;
+  color: white;
+  font-family: "Rockwell";
+}
+
+body {
+  background-color: #42454f;
+}
+
+div {
+  text-align: center;
+}
+
+.button {
+  border: 1px solid white;
+  border-radius: 10px;
+  height: 40px;
+  padding-top: 7px;
+  width: 150px;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #3e9d28;
+}
+
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/*Header styling*/
+header {
+  margin-top: 20px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: right;
+}
+
+#title {
+  font-family: "Dancing Script";
+  font-weight: 700;
+  font-size: 60px;
+}
+
+#hint-button,
+#new-game-button {
+  margin: auto 10px auto;
+}
+
+#lives {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+}
+
+#lives img {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 40px;
+  width: 40px;
+}
+
+/*Game result styling*/
+#game-result {
+  color: green;
+  font-size: 100px;
+  margin-top: 50px;
+  font-family: "Dancing Script";
+  font-weight: 700;
+}
+
+/*Game configuration styling*/
+#start-button {
+  margin-left: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#game-config {
+  margin-top: 30px;
+}
+
+/*Cards area styling*/
+#cards-container {
+  background-image: url("./images/bigstock-poker-table-background-26587844-2-1.jpg");
+  background-repeat: none;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: 15px solid sienna;
+  background-size: 100% 100%;
+  border-radius: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-image: url("./images/card\ back\ red.png");
+  background-repeat: none;
+  background-size: 100% 100%;
+  width: 200px;
+  height: 300px;
+  margin: 15px;
+}
+
+.card:hover {
+  cursor: pointer;
+}

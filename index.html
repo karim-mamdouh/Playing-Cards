@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards Memory Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="./images/playing-cards.png" type="image/icon type" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div id="title">Cards Memory Game</div>
+      <div class="header-container">
+        <div id="new-game-button" class="button">New Game</div>
+        <div class="button" id="hint-button">Hint</div>
+        <div id="lives">
+          <p>Available Hints: &nbsp;</p>
+          <img src="./images/idea.png" alt="hint image" id="hint-3" />
+          <img src="./images/idea.png" alt="hint image" id="hint-2" />
+          <img src="./images/idea.png" alt="hint image" id="hint-1" />
+        </div>
+      </div>
+    </header>
+    <section>
+      <div id="game-result"></div>
+    </section>
+    <section>
+      <div class="container" id="game-config">
+        <p id="level">Level 1</p>
+        <div class="button" id="start-button">Start Game</div>
+        <p id="timer-section">
+          Remaining time: &nbsp; <span id="time">00:00:00</span>
+        </p>
+      </div>
+    </section>
+    <main>
+      <div id="cards-container" class="container"></div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
