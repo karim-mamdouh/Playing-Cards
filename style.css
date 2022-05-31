@@ -1,19 +1,18 @@
 /*General styling*/
-*,
-html,
-body {
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-size: 20px;
   color: white;
-  font-family: "Rockwell";
+}
+
+:root {
+  font-size: 20px;
 }
 
 body {
   background-color: #42454f;
-}
-
-div {
-  text-align: center;
+  font-family: "Rockwell";
 }
 
 .button {
@@ -22,11 +21,16 @@ div {
   height: 40px;
   padding-top: 7px;
   width: 150px;
+  text-align: center;
 }
 
 .button:hover {
   cursor: pointer;
   background-color: #3e9d28;
+}
+
+p {
+  margin: auto 0;
 }
 
 .container {
@@ -83,6 +87,7 @@ header {
   margin-top: 50px;
   font-family: "Dancing Script";
   font-weight: 700;
+  text-align: center;
 }
 
 /*Game configuration styling*/

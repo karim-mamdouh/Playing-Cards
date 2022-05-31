@@ -7,8 +7,6 @@
     <title>Cards Memory Game</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
       rel="stylesheet"
@@ -17,8 +15,8 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header>
-      <div id="title">Cards Memory Game</div>
+    <header class="header-control">
+      <h1 id="title">Cards Memory Game</h1>
       <div class="header-container">
         <div id="new-game-button" class="button">New Game</div>
         <div class="button" id="hint-button">Hint</div>
@@ -30,21 +28,15 @@
         </div>
       </div>
     </header>
-    <section>
-      <div id="game-result"></div>
+    <h2 id="game-result"></h2>
+    <section class="container" id="game-config">
+      <p id="level">Level 1</p>
+      <div class="button" id="start-button">Start Game</div>
+      <p id="timer-section">
+        Remaining time: &nbsp; <span id="time">00:00:00</span>
+      </p>
     </section>
-    <section>
-      <div class="container" id="game-config">
-        <p id="level">Level 1</p>
-        <div class="button" id="start-button">Start Game</div>
-        <p id="timer-section">
-          Remaining time: &nbsp; <span id="time">00:00:00</span>
-        </p>
-      </div>
-    </section>
-    <main>
-      <div id="cards-container" class="container"></div>
-    </main>
+    <section id="cards-container" class="container"></section>
     <script src="./script.js"></script>
   </body>
 </html>

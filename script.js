@@ -393,6 +393,14 @@
       }, 500);
     }
   }
+  //Start game button event; activates "gameActive" flag and starts timer
+  function startButtonEvent() {
+    if (!gameActive && foundMatches != numberOfCards / 2 && time.seconds != 0) {
+      gameActive = true;
+      timer = setInterval(gameTimer, 1000);
+      foundMatches = 0;
+    }
+  }
   //#endregion
 
   //#region HTML events and functions
@@ -407,19 +415,9 @@
     .addEventListener("click", newGameEvent);
   //Connecting the "hintEvent" function to the "hint-button" click event
   document.getElementById("hint-button").addEventListener("click", hintEvent);
-  //Connecting "start-button" click event to a new function to start game mode
+  //Connecting "start-button" click event to "startButtonEvent" function
   document
     .getElementById("start-button")
-    .addEventListener("click", function () {
-      if (
-        !gameActive &&
-        foundMatches != numberOfCards / 2 &&
-        time.seconds != 0
-      ) {
-        gameActive = true;
-        timer = setInterval(gameTimer, 1000);
-        foundMatches = 0;
-      }
-    });
+    .addEventListener("click", startButtonEvent);
   //#endregion
 })();
