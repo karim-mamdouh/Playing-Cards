@@ -11,7 +11,7 @@
   var numberOfCards = 10; //Number of cards to be filled in the "generatedCards" and HTML grid
   var generatedCards = []; //Array that holds generated card pairs
   var defaultCard = "card back red.png"; //Flipped card image directory
-  var defaultImagesDir = "images/"; //Default images folder directory
+  var defaultImagesDir = "./images/"; //Default images folder directory
   //Array holding all card image directories
   var images = [
     "2_of_clubs.png",
