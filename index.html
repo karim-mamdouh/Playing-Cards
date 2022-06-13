@@ -15,25 +15,31 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="header-control">
-      <h1 id="title">Cards Memory Game</h1>
-      <div class="header-container">
-        <div id="new-game-button" class="button">New Game</div>
-        <div class="button" id="hint-button">Hint</div>
-        <div id="lives">
-          <p>Available Hints: &nbsp;</p>
-          <img src="./images/idea.png" alt="hint image" id="hint-3" />
-          <img src="./images/idea.png" alt="hint image" id="hint-2" />
-          <img src="./images/idea.png" alt="hint image" id="hint-1" />
+    <header class="header">
+      <h1 id="header__title">Cards Memory Game</h1>
+      <div class="header__container">
+        <button id="header__new-game-btn" class="button">New Game</button>
+        <button class="button" id="header__hint-btn">Hint</button>
+        <div id="header__lives">
+          <p>Available Hints:</p>
+          <figure>
+            <img src="./images/idea.png" alt="hint image" id="header__hint-3" />
+          </figure>
+          <figure>
+            <img src="./images/idea.png" alt="hint image" id="header__hint-2" />
+          </figure>
+          <figure>
+            <img src="./images/idea.png" alt="hint image" id="header__hint-1" />
+          </figure>
         </div>
       </div>
     </header>
     <h2 id="game-result"></h2>
     <section class="container" id="game-config">
-      <p id="level">Level 1</p>
-      <div class="button" id="start-button">Start Game</div>
-      <p id="timer-section">
-        Remaining time: &nbsp; <span id="time">00:00:00</span>
+      <p id="game-config__level">Level 1</p>
+      <button class="button" id="game-config__start-btn">Start Game</button>
+      <p id="game-config__timer">
+        Remaining time: &nbsp; <span id="game-config__time">00:00:00</span>
       </p>
     </section>
     <section id="cards-container" class="container"></section>

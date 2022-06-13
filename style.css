@@ -4,35 +4,30 @@
   margin: 0;
   box-sizing: border-box;
   color: white;
-}
-
-:root {
-  font-size: 20px;
-}
-
-body {
-  background-color: #42454f;
   font-family: "Rockwell";
 }
-
+body {
+  background-color: #42454f;
+}
 .button {
   border: 1px solid white;
   border-radius: 10px;
   height: 40px;
-  padding-top: 7px;
-  width: 150px;
+  font-size: 1.25rem;
+  width: 9.375rem;
   text-align: center;
+  background-color: transparent;
 }
-
+img {
+  max-width: 100%;
+}
 .button:hover {
   cursor: pointer;
   background-color: #3e9d28;
 }
-
 p {
   margin: auto 0;
 }
-
 .container {
   width: 80%;
   margin-left: auto;
@@ -42,7 +37,7 @@ p {
 }
 
 /*Header styling*/
-header {
+.header {
   margin-top: 20px;
   height: 60px;
   display: flex;
@@ -50,34 +45,36 @@ header {
   padding-left: 40px;
   padding-right: 40px;
 }
-
-.header-container {
+.header__container {
   display: flex;
   justify-content: right;
 }
-
-#title {
+#header__title {
   font-family: "Dancing Script";
   font-weight: 700;
-  font-size: 60px;
+  font-size: 3.75rem;
 }
-
-#hint-button,
-#new-game-button {
+#header__hint-btn,
+#header__new-game-btn {
   margin: auto 10px auto;
 }
-
-#lives {
+#header__lives {
   display: flex;
   justify-content: space-between;
   margin-left: 10px;
 }
+#header__lives p {
+  font-size: 1.25rem;
 
-#lives img {
-  margin-top: auto;
-  margin-bottom: auto;
-  height: 40px;
-  width: 40px;
+  margin-right: 0.5rem;
+}
+#header__lives figure {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#header__lives figure img {
+  width: 2.5rem;
 }
 
 /*Game result styling*/
@@ -91,20 +88,20 @@ header {
 }
 
 /*Game configuration styling*/
-#start-button {
+#game-config__start-btn {
   margin-left: 100px;
   margin-top: auto;
   margin-bottom: auto;
 }
-
 #game-config {
   margin-top: 30px;
+  font-size: 1.25rem;
 }
 
 /*Cards area styling*/
 #cards-container {
   background-image: url("./images/bigstock-poker-table-background-26587844-2-1.jpg");
-  background-repeat: none;
+  background-repeat: no-repeat;
   margin-top: 30px;
   margin-bottom: 50px;
   border: 15px solid sienna;
@@ -112,16 +109,35 @@ header {
   border-radius: 20px;
   flex-wrap: wrap;
 }
-
 .card {
   background-image: url("./images/card\ back\ red.png");
   background-repeat: none;
   background-size: 100% 100%;
-  width: 200px;
-  height: 300px;
+  width: 12.5rem;
+  height: 18.75rem;
   margin: 15px;
 }
-
 .card:hover {
   cursor: pointer;
+}
+
+/*Media quieries*/
+@media (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+  #header__title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  :root {
+    font-size: 12px;
+  }
+  #header__title {
+    font-size: 2.5rem;
+  }
+  .button {
+    font-size: 1.1rem;
+  }
 }

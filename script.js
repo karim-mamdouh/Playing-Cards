@@ -235,7 +235,7 @@
     hintCount = 3;
     for (var i = 0; i < hintCount; i++) {
       document
-        .getElementById(`hint-${i + 1}`)
+        .getElementById(`header__hint-${i + 1}`)
         .setAttribute("src", defaultImagesDir + "idea.png");
     }
   }
@@ -281,7 +281,7 @@
       gameActive = false;
     }
     time.seconds--;
-    showTime(time, "time");
+    showTime(time, "game-config__time");
   }
   //Function called when game is won to clear interval of "timer"
   function gameWon() {
@@ -306,8 +306,8 @@
         time.setTime(0, 1, 30);
         break;
     }
-    document.getElementById("level").innerHTML = `Level ${level}`;
-    showTime(time, "time");
+    document.getElementById("game-config__level").innerHTML = `Level ${level}`;
+    showTime(time, "game-config__time");
     resetCardsGrid();
     activeCard = null;
     foundMatches = 0;
@@ -388,7 +388,7 @@
         flipAllCards(false);
         hintActivated = false;
         document
-          .getElementById(`hint-${hintCount--}`)
+          .getElementById(`header__hint-${hintCount--}`)
           .setAttribute("src", defaultImagesDir + "idea-turnedoff.png");
       }, 500);
     }
@@ -411,13 +411,15 @@
   })();
   //Connecting the "newGameEvent" function to the "new-game-button" click event
   document
-    .getElementById("new-game-button")
+    .getElementById("header__new-game-btn")
     .addEventListener("click", newGameEvent);
   //Connecting the "hintEvent" function to the "hint-button" click event
-  document.getElementById("hint-button").addEventListener("click", hintEvent);
+  document
+    .getElementById("header__hint-btn")
+    .addEventListener("click", hintEvent);
   //Connecting "start-button" click event to "startButtonEvent" function
   document
-    .getElementById("start-button")
+    .getElementById("game-config__start-btn")
     .addEventListener("click", startButtonEvent);
   //#endregion
 })();
