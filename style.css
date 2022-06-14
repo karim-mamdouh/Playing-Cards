@@ -97,6 +97,13 @@ p {
   margin-top: 30px;
   font-size: 1.25rem;
 }
+#game-config p:first-child {
+  display: flex;
+}
+#game-config__level {
+  display: inline-block;
+  margin-left: 0.25rem;
+}
 
 /*Cards area styling*/
 #cards-container {
@@ -150,13 +157,19 @@ p {
   #header__title {
     margin-bottom: 1.5rem;
     margin-top: 1.5rem;
+    font-size: 3rem;
   }
   #game-config__start-btn {
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
   }
   .card {
     width: 9rem;
     height: 14rem;
+  }
+  #game-config > p {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
