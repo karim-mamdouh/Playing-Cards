@@ -413,6 +413,9 @@
   document
     .getElementById("header__new-game-btn")
     .addEventListener("click", newGameEvent);
+  // document
+  // .getElementById("header__new-game-btn")
+  // .addEventListener("tou", newGameEvent);
   //Connecting the "hintEvent" function to the "hint-button" click event
   document
     .getElementById("header__hint-btn")
@@ -421,5 +424,8 @@
   document
     .getElementById("game-config__start-btn")
     .addEventListener("click", startButtonEvent);
+  document
+    .getElementById("game-config__start-btn")
+    .addEventListener("touchstart", startButtonEvent);
   //#endregion
 })();
